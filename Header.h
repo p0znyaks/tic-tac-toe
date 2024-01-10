@@ -11,3 +11,4 @@ int check_win();
 void writeIntToFile(int number, const std::string& filename);
 int readIntFromFile(const std::string& filename);
 void ShowStatistics();
+int time();
