@@ -1,9 +1,8 @@
 #include "Header.h"
-#include <fstream>
 char square[10] = { 'o','1','2','3','4','5','6','7','8','9' };
 int player = 1, i, choice;
 char mark;
-int GamesPlayed, FirstPlayerWonCount, SecondPlayerWonCount;
+int GamePlayed, FirstWonCount, SecondWonCount;
 std::string filename1 = "firstWin.txt";
 std::string filename2 = "SecondWin.txt";
 std::string filename3 = "Games.txt";
@@ -37,14 +36,21 @@ int main()
 
         i = check_win();
     } while (i == -1);
-    writeIntToFile(++GamesPlayed, filename3);
-    if(--player == 1){
-        writeIntToFile(++FirstPlayerWonCount, filename1)
+   
+    GamePlayed = readIntFromFile(filename3);
+    FirstWonCount = readIntFromFile(filename1);
+    SecondWonCount = readIntFromFile(filename2);
+    writeIntToFile(++GamePlayed, filename3);
+
+    if (--player == 1) {
+        writeIntToFile(++FirstWonCount, filename1);
     }
     else {
-        writeIntToFile(++SecondPlayerWonCount, filename2)
+        writeIntToFile(++SecondWonCount, filename2);
     }
-    
+
+    player++;
+
     board();
     if (i == 1)
         cout << "Игрок " << --player << " победил!" << endl;
