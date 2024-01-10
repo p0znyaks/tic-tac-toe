@@ -52,8 +52,10 @@ int main()
     player++;
 
     board();
-    if (i == 1)
-        cout << "Игрок " << --player << " победил!" << endl;
+   if (i == 1) {
+    cout << "Игрок " << --player << " победил!" << endl;
+    time();
+   }
     else
         cout << "Это ничья!" << endl;
     ShowStatistics();
