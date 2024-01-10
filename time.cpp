@@ -4,12 +4,12 @@
 
 using namespace std;
 
-auto start = chrono::steady_clock::now(); 
+auto start = chrono::steady_clock::now();
 
 int time()
 {
-	this_thread::sleep_for(std::chrono::seconds(2)); 
-	auto current = chrono::steady_clock::now(); 
-	cout << "Âðåìÿ ñ íà÷àëà èãðû: " << chrono::duration_cast<chrono::seconds>(current - start).count() << " ñåêóíä.\n";
+	this_thread::sleep_for(std::chrono::seconds(2));
+	auto current = chrono::steady_clock::now();
+	cout << "Ð’Ñ€ÐµÐ¼Ñ Ñ Ð½Ð°Ñ‡Ð°Ð»Ð° Ð¸Ð³Ñ€Ñ‹: " << chrono::duration_cast<chrono::seconds>(current - start).count() << " ÑÐµÐºÑƒÐ½Ð´.\n";
 	return 0;
 }
