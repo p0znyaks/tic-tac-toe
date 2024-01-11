@@ -1,6 +1,6 @@
 
 #include "Header.h"
-void writeIntToFile(int number, const std::string& filename) {
+void writeIntToFile(int number, const string& filename) {
 	ofstream file(filename, std::ios::trunc);
 	if (file.is_open()) {
 		file << number;
@@ -8,7 +8,7 @@ void writeIntToFile(int number, const std::string& filename) {
 	}
 }
 
-int readIntFromFile(const std::string& filename) {
+int readIntFromFile(const string& filename) {
 	ifstream file(filename);
 	int number = 0;
 	if (file.is_open()) {
