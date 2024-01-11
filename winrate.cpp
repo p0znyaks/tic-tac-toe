@@ -1,5 +1,5 @@
 
-#include "Header.h"
+#include "header.h"
 void writeIntToFile(int number, const string& filename) {
 	ofstream file(filename, std::ios::trunc);
 	if (file.is_open()) {
