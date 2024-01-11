@@ -54,7 +54,7 @@ int main()
     board();
    if (i == 1) {
     cout << "Игрок " << --player << " победил!" << endl;
-    time();
+    timeE();
    }
     else
         cout << "Это ничья!" << endl;
