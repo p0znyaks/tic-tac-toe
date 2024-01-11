@@ -1,7 +1,7 @@
 #include "header.h"
 
 void writeIntToFile(int number, const string& filename) {
-	ofstream file(filename, std::ios::trunc);
+	ofstream file(filename, std::ios::in);
 	if (file.is_open()) {
 		file << number;
 		file.close();
