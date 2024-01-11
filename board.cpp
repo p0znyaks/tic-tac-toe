@@ -4,8 +4,8 @@ extern char square[10];
 
 void board()
 {
-    cout << "\n\n\tÊðåñòèêè-íîëèêè\n\n";
-    cout << "Èãðîê 1 (X)  -  Èãðîê 2 (O)" << endl << endl;
+    cout << "\n\n\tÐšÑ€ÐµÑÑ‚Ð¸ÐºÐ¸-Ð½Ð¾Ð»Ð¸ÐºÐ¸\n\n";
+    cout << "Ð˜Ð³Ñ€Ð¾Ðº 1 (X)  -  Ð˜Ð³Ñ€Ð¾Ðº 2 (O)" << endl << endl;
     cout << endl;
     cout << "     |     |     " << endl;
     cout << "  " << square[1] << "  |  " << square[2] << "  |  " << square[3] << endl;
@@ -16,4 +16,6 @@ void board()
     cout << "     |     |     " << endl;
     cout << "  " << square[7] << "  |  " << square[8] << "  |  " << square[9] << endl;
     cout << "     |     |     " << endl << endl;
+   
 }
+
