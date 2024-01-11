@@ -3,9 +3,9 @@ char square[10] = { 'o','1','2','3','4','5','6','7','8','9' };
 int player = 1, i, choice;
 char mark;
 int GamePlayed, FirstWonCount, SecondWonCount;
-std::string filename1 = "firstWin.txt";
-std::string filename2 = "SecondWin.txt";
-std::string filename3 = "Games.txt";
+string filename1 = "firstWin.txt";
+string filename2 = "SecondWin.txt";
+string filename3 = "Games.txt";
 
 
 int main()
