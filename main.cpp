@@ -11,10 +11,10 @@ int main() {
     setlocale(LC_ALL, "Russian");
     int choice;
 
-    cout << "Âûáåðèòå äåéñòâèå:" << endl;
-    cout << "1. Çàïóñòèòü êðåñòèêè-íîëèêè" << endl;
-    cout << "2. Çàïóñòèòü êàëüêóëÿòîð" << endl;
-    cout << "Âàø âûáîð: ";
+    cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << endl;
+    cout << "1. Ð—Ð°Ð¿ÑƒÑÑ‚Ð¸Ñ‚ÑŒ ÐºÑ€ÐµÑÑ‚Ð¸ÐºÐ¸-Ð½Ð¾Ð»Ð¸ÐºÐ¸" << endl;
+    cout << "2. Ð—Ð°Ð¿ÑƒÑÑ‚Ð¸Ñ‚ÑŒ ÐºÐ°Ð»ÑŒÐºÑƒÐ»ÑÑ‚Ð¾Ñ€" << endl;
+    cout << "Ð’Ð°Ñˆ Ð²Ñ‹Ð±Ð¾Ñ€: ";
     cin >> choice;
 
     switch (choice) {
@@ -25,7 +25,7 @@ int main() {
         startCalculator(); 
         break;
     default:
-        cout << "Íåïðàâèëüíûé âûáîð" << endl;
+        cout << "ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ñ‹Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€" << endl;
         break;
     }
 
