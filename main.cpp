@@ -1,63 +1,33 @@
-#include "header.h"
-char square[10] = { 'o','1','2','3','4','5','6','7','8','9' };
-int player = 1, i, choice;
-char mark;
-int GamePlayed, FirstWonCount, SecondWonCount;
-string filename1 = "firstWin.txt";
-string filename2 = "SecondWin.txt";
-string filename3 = "Games.txt";
+#include <iostream>
 
 
-int main()
-{
-    setlocale(0, "ru");
 
-    do
-    {
-        board();
-        player = (player % 2) ? 1 : 2;
+void startTicTacToe();
+void startCalculator();
 
-        cout << "Ð˜Ð³Ñ€Ð¾Ðº " << player << ", Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ†Ð¸Ñ„Ñ€Ñƒ: ";
-        cin >> choice;
+using namespace std;
 
-        mark = (player == 1) ? 'X' : 'O';
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int choice;
 
-        if (choice >= 1 && choice <= 9 && square[choice] == choice + '0')
-        {
-            square[choice] = mark;
-            player++;
-        }
-        else
-        {
-            cout << "ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾Ðµ Ð´Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ. Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½ÑƒÑŽ Ñ†Ð¸Ñ„Ñ€Ñƒ." << endl;
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        }
+    cout << "Âûáåðèòå äåéñòâèå:" << endl;
+    cout << "1. Çàïóñòèòü êðåñòèêè-íîëèêè" << endl;
+    cout << "2. Çàïóñòèòü êàëüêóëÿòîð" << endl;
+    cout << "Âàø âûáîð: ";
+    cin >> choice;
 
-        i = check_win();
-    } while (i == -1);
-   
-    GamePlayed = readIntFromFile(filename3);
-    FirstWonCount = readIntFromFile(filename1);
-    SecondWonCount = readIntFromFile(filename2);
-    writeIntToFile(++GamePlayed, filename3);
-
-    if (--player == 1) {
-        writeIntToFile(++FirstWonCount, filename1);
-    }
-    else {
-        writeIntToFile(++SecondWonCount, filename2);
+    switch (choice) {
+    case 1:
+        startTicTacToe(); 
+        break;
+    case 2:
+        startCalculator(); 
+        break;
+    default:
+        cout << "Íåïðàâèëüíûé âûáîð" << endl;
+        break;
     }
 
-    player++;
-
-    board();
-   if (i == 1) {
-    cout << "Ð˜Ð³Ñ€Ð¾Ðº " << --player << " Ð¿Ð¾Ð±ÐµÐ´Ð¸Ð»!" << endl;
-    timeE();
-   }
-    else
-        cout << "Ð­Ñ‚Ð¾ Ð½Ð¸Ñ‡ÑŒÑ!" << endl;
-    ShowStatistics();
     return 0;
 }
