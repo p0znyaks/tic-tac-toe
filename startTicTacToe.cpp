@@ -17,7 +17,7 @@ void startTicTacToe()
         board();
         player = (player % 2) ? 1 : 2;
 
-        cout << "Èãðîê " << player << ", ââåäèòå öèôðó: ";
+        cout << "Ð˜Ð³Ñ€Ð¾Ðº " << player << ", Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ†Ð¸Ñ„Ñ€Ñƒ: ";
         cin >> choice;
 
         mark = (player == 1) ? 'X' : 'O';
@@ -29,7 +29,7 @@ void startTicTacToe()
         }
         else
         {
-            cout << "Íåïðàâèëüíîå äâèæåíèå. Ââåäèòå êîððåêòíóþ öèôðó." << endl;
+            cout << "ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾Ðµ Ð´Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ. Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½ÑƒÑŽ Ñ†Ð¸Ñ„Ñ€Ñƒ." << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
@@ -53,10 +53,10 @@ void startTicTacToe()
 
     board();
     if (i == 1) {
-        cout << "Èãðîê " << --player << " ïîáåäèë!" << endl;
+        cout << "Ð˜Ð³Ñ€Ð¾Ðº " << --player << " Ð¿Ð¾Ð±ÐµÐ´Ð¸Ð»!" << endl;
         timeE();
     }
     else
-        cout << "Ýòî íè÷üÿ!" << endl;
+        cout << "Ð­Ñ‚Ð¾ Ð½Ð¸Ñ‡ÑŒÑ!" << endl;
     ShowStatistics();
 }
