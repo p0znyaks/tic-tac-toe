@@ -56,7 +56,7 @@ void startTicTacToe()
         cout << "Игрок " << --player << " победил!" << endl;
         timeE();
     }
-    else if (i == 0) {
+    else if  {
         cout << "Это ничья!" << endl;
     }
         
