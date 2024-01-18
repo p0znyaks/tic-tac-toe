@@ -1,7 +1,7 @@
 #include <iostream>
 
 
-
+int time2();
 void startTicTacToe();
 void startCalculator();
 
@@ -14,6 +14,7 @@ int main() {
     cout << "Выберите действие:" << endl;
     cout << "1. Запустить крестики-нолики" << endl;
     cout << "2. Запустить калькулятор" << endl;
+    cout << "3. Запустить таймер" << endl;
     cout << "Ваш выбор: ";
     cin >> choice;
 
@@ -23,6 +24,9 @@ int main() {
         break;
     case 2:
         startCalculator(); 
+        break;
+    case 3:
+        time2();
         break;
     default:
         cout << "Неправильный выбор" << endl;
